@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="how-it-works-styles.css">
+    <link rel="stylesheet" href="global-styles.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- Email JS -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "Uv6jMGPoJgbdcEG1-",
+        });
+    })();
+    </script>
+
+    <title>Advantage Stringing</title>
+  </head>
+
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #0041a9;">
+        <div class="container">
+        <a class="navbar-brand" href="#">Advantage Stringing</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="gap: 10px;">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="how-it-works.html">How It Works</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="strings.html">Strings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="faqs.html">FAQs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="events.html">Events</a>
+            </li>
+            </ul>
+            <button class="btn my-2 my-sm-0 navbar-white-button" onclick="goToOrderPage()">Order Now</button>
+        </div></div>
+    </nav>
+    
+    <div class="how-to-header page-image-header d-flex">
+        <div class="mx-auto my-auto page-header-content">
+            <h1 class="page-header-text mx-auto">How it Works</h1>
+            <p class="page-header-sub-text mx-auto">Learn how to bring the Advantage into your court</p>
+        </div>
+    </div>
+
+    <div class="how-to-section">
+        <div class="container">
+            <div class="row mx-auto">
+                <div class="col d-flex">
+                    <div class="text-wrapper my-auto small-container mx-auto">
+                        <p class="how-to-section-header text-center">Pricing</p>
+                        <p class="how-to-section-text text-center">At Advantage Stringing, we believe stringing shouldn't break the bank. That's why we offer the most affordable prices in the Twin Cities. We recommend starting with either our Standard or Deluxe package, and if you have your own strings, our Basic option is a great fit!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <div class="pricing-section mx-auto d-flex">
+                <div class="d-flex pricing-wrapper text-center mx-auto">
+                    <div class="d-flex pricing-inner-wrapper">
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-header">
+                                <h4 class="my-0 font-weight-normal">Basic</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$15</h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>You provide string</li>
+                                    <li>Any string</li>
+                                    <li>Strings: $0</li>
+                                    <li>Stringing Fee: $15</li>
+                                </ul>
+                                <button type="button" class="btn mb-3 outline-gray-button my-auto" onclick="goToOrderPage()">Order Now</button>
+                            </div>
+                        </div>
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-header" style="background-color: #0041a9; color: #fff;">
+                            <h4 class="my-0 font-weight-normal">Standard</h4>
+                            </div>
+                            <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$20</h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>We provide string</li>
+                                <li>Standard Strings</li>
+                                <li>Strings: $5</li>
+                                <li>Stringing Fee: $15</li>
+                            </ul>
+                            <button type="button" class="btn mb-3 solid-blue-button my-auto" onclick="goToOrderPage()">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex pricing-inner-wrapper">
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-header" style="background-color: #0041a9; color: #fff;">
+                            <h4 class="my-0 font-weight-normal">Deluxe</h4>
+                            </div>
+                            <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$25</h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>We provide string</li>
+                                <li>Deluxe Strings</li>
+                                <li>Strings: $10</li>
+                                <li>Stringing Fee: $15</li>
+                            </ul>
+                            <button type="button" class="btn mb-3 solid-blue-button my-auto" onclick="goToOrderPage()">Order Now</button>
+                            </div>
+                        </div>
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-header" style="background-color: goldenrod; color: #fff;">
+                                <h4 class="my-0 font-weight-normal">Premium</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$35</h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>We provide string</li>
+                                    <li>String not in stock</li>
+                                    <li>String Fee: $20</li>
+                                    <li>Stringing Fee: $15</li>
+                                </ul>
+                                <button type="button" class="btn mb-3 outline-gold-button my-auto" onclick="goToOrderPage()">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+            <div class="reverse-row-flex d-flex mx-auto">
+                <div class="d-flex flex-column">
+                    <div class="text-wrapper my-auto">
+                        <p class="how-to-section-header">Choose Strings and Tension</p>
+                        <p class="how-to-section-text">We offer a full range of Polyester and Synthetic Gut strings. Different types and brands of string can generate more spin, power, control, or feel. We recommend Hyper G or Square X for more advanced players, and any of our synthetic guts for beginners.</p>
+                        <p class="how-to-section-text" style="margin: 15px 0px;">We recommend choosing a tension between 50 and 60 pounds. Higher tensions provide more control, and lower tensions deliver more power. If you have further questions, our team is happy to assist with choosing your ideal strings or tension.</p>
+                    </div>
+                    <button type="submit" class="btn mb-3 solid-blue-button my-auto" style="width: 170px;" onclick="goToStringsPage()">Browse Our Strings</button>
+                </div>
+                <div class="d-flex">
+                    <img src="Images/athlete_strings_3.jpg" class="how-to-circle-img my-auto mx-auto" alt="Picture of us">
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <div class="row-flex d-flex mx-auto">
+                <div class="d-flex">
+                    <img src="Images/us-medal.JPG" class="how-to-circle-img my-auto mx-auto" alt="Picture of us">
+                </div>
+                <div class="d-flex flex-column">
+                    <div class="text-wrapper my-auto">
+                        <p class="how-to-section-header">Place an Order</p>
+                        <p class="how-to-section-text">Visit our "Order" page to start your order. If you need a new grip, shock absorber, or grommets, indicate it as an "Add On" in the order form. Don't worry about paying now, we accept payment through Venmo or cash after we finish stringing.</p>
+                        <p class="how-to-section-text" style="margin: 15px 0px;">Once we recieve your order details, our team will reach out to establish a pickup or dropoff location. We are located in Falcon Heights, and offer a delivery service for $2/mile. </p>
+                    </div>
+                    <button type="submit" class="btn mb-3 solid-blue-button my-auto" style="width: 170px;" onclick="goToOrderPage()">Order Now</button>
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+            <div class="row mx-auto">
+                <div class="col d-flex flex-column">
+                    <div class="text-wrapper my-auto">
+                        <p class="how-to-section-header text-center">That's It!</p>
+                        <p class="how-to-section-text text-center small-container mx-auto">Our expert stringers will string your racket on any timeline. If you're in a pinch, we offer same-day stringing for only $5 extra. Our team will reach out to arrange pickup details after your racket is completed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="contact-info-section">
+        <div class="container">
+            <p class="contact-info-large-text text-center mx-auto">Need more details?</p>
+            <p class="contact-info-small-text text-center mx-auto">If you have any lingering questions about Advantage Stringing and our ordering process, please reach out! Our team is happy to answer any questions and give further recommendations.</p>
+            <div class="row mx-auto">
+                <div class="col">
+                    <div class="contact-element-wrapper d-flex flex-column hoverable" onclick="openQuestionModal()">
+                        <i class="bi-chat-fill mx-auto contact-icon"></i>
+                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px;">Direct Messages</p>
+                        <p class="contact-info-tiny-text text-center">Click Here</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="contact-element-wrapper d-flex flex-column">
+                        <div class="mx-auto d-flex" style="gap: 7px;">
+                            <i class="bi-telephone-fill mx-auto contact-icon" style="margin-right: 5px;"></i>    
+                            <i class="bi-chat-left-text-fill mx-auto contact-icon" style="margin-left: 5px;"></i>    
+                        </div>
+                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px;">Call or Text</p>
+                        <p class="contact-info-tiny-text text-center phone-text-white">651-504-4842</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="contact-element-wrapper d-flex flex-column">
+                        <i class="bi-envelope-fill mx-auto contact-icon"></i>
+                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px;">Email Us</p>
+                        <p class="contact-info-tiny-text text-center">AdvantageStringers@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="questionModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">How can we help?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="questionForm">
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-around" style="gap: 20px;">
+                            <input type="text" class="blue-input" placeholder="First Name" id="questionFirstName" required>
+                            <input type="text" class="blue-input" placeholder="Last Name" id="questionLastName" required>
+                        </div>
+                        <input type="text" class="blue-input" placeholder="Email / Phone Number" id="questionContactInfo" required>
+                        <textarea class="form-control blue-textarea" id="questionMessage" rows="3" placeholder="Question / Message" required></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn solid-blue-button mx-auto" id="askQuestionButton">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="questionConfirmationModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Order Complete</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <p class="text-center">Message Sent!</p>
+                <p class="text-center">We will get back to you as soon as possible.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn solid-blue-button mx-auto" data-dismiss="modal">Done</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="newsletter-signup-section">
+        <div class="container">
+            <p class="newsletter-large-text text-center">Sign Up and Save</p>
+            <p class="newsletter-small-text text-center">Sign up now to recieve special offers, immediate announcements, and free giveaways</p>
+            <div class="d-flex mx-auto" style="margin-bottom: 10px;">
+                <input type="email" class="form-control newsletter-input-field mx-auto my-auto" id="subscribeEmailInput" placeholder="Enter your email">
+                <button type="submit" class="btn mb-3 solid-blue-button my-auto" id="subscribeInputButton" onclick="sendSubscribeEmail()">Subscribe</button>
+            </div>
+            <div class="d-flex mx-auto">
+                <p class="newsletter-small-text text-center mx-auto d-none" id="subscribeConfirmationWrapper">Thanks for Subscribing!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-6 mx-auto">
+                    <p class="footer-large-text">Advantage Stringing</p>
+                    <p class="footer-medium-text phone-text-white">651-504-4642</p>
+                    <p class="footer-medium-text">AdvantageStringers@gmail.com</p>
+                </div>
+                <div class="col-2 mx-auto">
+                    <p class="footer-small-text hoverable" onclick="goToOrderPage()">Order</p>
+                    <p class="footer-small-text hoverable" onclick="goToHowToPage()">How It Works</p>
+                    <p class="footer-small-text hoverable" onclick="goToHomePage()">Home</p>
+                    <p class="footer-small-text hoverable" onclick="goToStringsPage()">Strings</p>
+                </div>
+                <div class="col-2 mx-auto">
+                    <p class="footer-small-text hoverable" onclick="goToAboutPage()">About</p>
+                    <p class="footer-small-text hoverable" onclick="goToFAQsPage()">FAQs</p>
+                    <p class="footer-small-text hoverable" onclick="goToEventsPage()">Events</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="global-js.js"></script>
+</body>
+
+<script>
+
+    function sendSubscribeEmail() {
+        if($("#subscribeEmailInput").val() != "") {
+            sendQuestionEmail({
+                customer_name: "Advantage Stringing Customer",
+                contact_info: $("#subscribeEmailInput").val(),
+                message: "Customer has subscribed to the Advantage Stringing email list"
+            })
+            $("#subscribeEmailInput").val("");
+            $("#subscribeEmailInput").addClass("d-none");
+            $("#subscribeInputButton").addClass("d-none");
+            $("#subscribeConfirmationWrapper").removeClass("d-none");
+        }
+    }
+
+    const openQuestionModal = () => {
+        $("#questionModal").modal('show');
+    }
+
+    $("#questionForm").on('submit', function(e) {
+        e.preventDefault();
+        
+        let newQuestion = new Question(
+            $("#questionFirstName").val(),
+            $("#questionLastName").val(),
+            $("#questionContactInfo").val(),
+            $("#questionMessage").val()
+        )
+
+        // Clear form
+        $("#questionFirstName").val("")
+        $("#questionLastName").val("")
+        $("#questionContactInfo").val("")
+        $("#questionMessage").val("")
+
+        // Send message to us
+        sendQuestionEmail(newQuestion);
+
+        $("#questionModal").modal('hide');
+
+        setTimeout(function(){
+            //  Move to confirmation modal
+            $("#questionConfirmationModal").modal('show');
+        }, 700);
+    });
+</script>
+
+
+</html>

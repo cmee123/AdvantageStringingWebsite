@@ -1,0 +1,248 @@
+.order-header {
+    background-image: url('./Images/PricingHeader.png');
+    min-height: calc(60vh);
+}
+
+/* How To Order Section */
+.how-to-section {
+    padding: 30px 0px;
+    background-color: #f1f1f1;;
+}
+
+.how-to-section .d-flex.row-flex {
+    max-width: 950px;
+    margin-top: 30px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.how-to-section .d-flex.how-to-col {
+    max-width: 300px;
+    width: 33%;
+}
+
+.how-to-col {
+    padding: 0px 10px;
+}
+
+.how-to-header {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.blue-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0041A9;
+}
+
+.step-text {
+    margin: 0px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.how-to-col-header {
+    margin: 10px 0px 5px 0px;
+    font-size: 22px;
+}
+
+/* Order Form Section */
+.order-section {
+    padding: 30px 0px;
+}
+
+.order-section .d-flex.order-row {
+    justify-content: center;
+}
+
+.order-form-col {
+    border: 1px solid #333;
+    padding: 20px;
+}
+
+.order-form-header {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.string-provider-selection {
+    margin: 10px 0px;
+}
+
+.string-select-flex {
+    gap: 15px;
+}
+
+.string-select-header {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.string-select-wrapper {
+    border: 1px solid #0041A9;
+    padding: 10px;
+    width: 95%;
+}
+
+.selected-tension {
+    margin: 0px;
+    font-size: 20px;
+    color: #0041A9;
+}
+
+.tension-select-wrapper {
+    margin: 0px;
+    gap: 5px;
+    width: auto;
+    padding: 5px;
+    min-width: 125px;
+    max-width: 260px;
+}
+
+.tension-change {
+    font-size: 25px;
+}
+
+.order-section .dropdown {
+    margin: 0px;
+    width: 360px;
+}
+
+.order-section .dropdown-button {
+    color: #333;
+}
+
+.add-ons-flex {
+    gap: 20px;
+}
+
+.add-ons-flex .selection-button {
+    font-size: 15px;
+    padding: 8px;
+}
+
+.add-racket-flex {
+    margin-top: 25px;
+}
+
+.order-summary-col {
+    border: 1px solid #333;
+    background-color: #f1f1f1;
+    padding: 20px;
+    width: 30%;
+    min-width: 250px;
+}
+
+.racket-summary-wrapper {
+    max-height: 320px;
+    overflow-y: scroll;
+    height: fit-content;
+}
+
+.racket-header {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.order-summary-col i {
+    font-size: 20px;
+}
+
+.racket-summary p {
+    margin: 0px;
+}
+
+.racket-summary {
+    margin-top: 10px;
+}
+
+.order-summary-col .modal-body {
+    padding: 20px 30px;
+}
+
+.order-section-small-header {
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.select-provider-header {
+    font-size: 18px;
+}
+
+.form-select {
+    border: 0px;
+}
+
+.string-provider-flex {
+    gap: 20px;
+}
+
+.racket-model-flex {
+    gap: 20px;
+}
+
+@media (max-width: 995px) {
+    .order-section .container {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 840px) {
+    .order-section .d-flex.order-row {
+        flex-direction: column;
+    }
+    .order-form-wrapper {
+        width: 100%;
+    }
+    .order-summary-col {
+        width: 100%;
+    }
+}
+
+@media (max-width: 545px) {
+    .how-to-section .d-flex.row-flex {
+        flex-direction: column;
+    }
+    .how-to-section .d-flex.how-to-col {
+        width: 300px;
+    }
+
+    .order-form-col .d-flex.string-select-flex {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .order-section .dropdown {
+        margin: 0px;
+        width: 100%;
+    }
+
+    .tension-select-wrapper {
+        gap: 10px;
+    }
+    .string-provider-flex {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .racket-model-flex {
+        flex-direction: column;
+        gap: 0px;
+    }
+}
+
+@media (max-width: 430px) {
+    .add-ons-flex {
+        flex-direction: column;
+    }
+    .racket-speed-flex {
+        flex-direction: column;
+    }
+    #contactInfoForm p {
+        text-align: center;
+    }
+}

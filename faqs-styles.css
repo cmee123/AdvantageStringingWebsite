@@ -1,0 +1,31 @@
+.faqs-header {
+    background-image: url('./Images/headerImgTest2.png');
+    min-height: calc(60vh);
+}
+
+.questions-section {
+    margin: 30px 0px;
+}
+
+.question-wrapper {
+    width: 95%;
+    max-width: 850px;
+    height: auto;
+    background-color: #F3F3F3;
+    padding: 18px;
+}
+
+.question-text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.answer-text {
+    margin: 0px;
+}
+
+.questions-section .d-flex {
+    gap: 25px;
+}
+

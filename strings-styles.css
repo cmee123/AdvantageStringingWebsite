@@ -1,0 +1,203 @@
+.string-header {
+    background-image: url('./Images/strings_header.png');
+    min-height: calc(60vh);
+}
+
+.header-button-wrapper {
+    margin-top: 20px;
+}
+
+.our-choices-section {
+    padding: 30px 0px;
+    background-color: #F1F1F1;
+}
+
+.our-choices-header {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.our-choices-section .card-deck {
+    gap: 20px;
+}
+
+.our-choices-section .card {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.choices-card-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.choices-card-body {
+    padding-right: 10px;
+    margin: 0px;
+}
+
+.string-review-img {
+    width: 130px;
+    height: 130px;
+    margin: auto;
+}
+
+.string-reviewer-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.reviewer-name-text {
+    margin: 0px;
+    height: auto;
+    margin-left: 12px;
+}
+
+.review-closing button {
+    height: 40px;
+}
+
+.strings-stock-header {
+    width: 100%;
+    height: auto;
+    background-color: #0041A9;
+    padding: 20px 0px;
+}
+
+.strings-stock-header-text {
+    font-size: 28px;
+    color: #fff;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.string-section-header {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0px;
+    color: #333;
+}
+
+.string-stock-section {
+    margin: 20px 0px;
+}
+
+.string-stock-section .card-deck {
+    margin-top: 30px;
+}
+
+.string-card {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.string-card-img {
+    width: 170px;
+    height: 170px;
+}
+
+.string-card-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.string-card-subtext {
+    margin: 0px;
+    font-size: 16px;
+}
+
+.string-card-subtitle {
+    margin: 0px;
+    font-size: 18px;
+    margin-top: 3px;
+}
+
+.divider-line {
+    border-bottom: 2px solid #0041A9;
+    margin: 5px 0px;
+    width: 85%;
+}
+
+.string-stock-section .row {
+    margin: 30px 0px;
+}
+
+@media (max-width: 1200px) {
+    .our-choices-section .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 990px) {
+    .string-stock-section .container {
+        max-width: 100%;
+    }
+
+    .string-card-img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .our-choices-section .card-body .d-flex {
+        flex-direction: column;
+    }
+    .string-review-img {
+        margin-top: 20px;
+    }
+    .our-choices-section .card-deck {
+        gap: 0px;
+    }
+}
+
+@media(max-width: 820px) {
+    .string-card-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 750px) {
+    .our-choices-section .card-deck {
+        flex-direction: column;
+        gap: 20px;
+        max-width: 90%;
+    }
+
+    .string-stock-section .card-deck {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .string-stock-section .container {
+        max-width: 80%;
+    }
+
+    .string-card-img {
+        width: 170px;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .our-choices-section .card-deck {
+        width: 100%;
+    }
+
+    .reviewer-name-text {
+        margin-left: 5px;
+    }
+
+    .our-choices-section .container {
+        padding: 0px 5px;
+    }
+}
+
+
+
+

@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="order-styles.css">
+    <link rel="stylesheet" href="global-styles.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- Email JS -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "Uv6jMGPoJgbdcEG1-",
+        });
+    })();
+    </script>
+
+    <title>Advantage Stringing</title>
+  </head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #0041a9;">
+        <div class="container">
+        <a class="navbar-brand" href="#">Advantage Stringing</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="gap: 10px;">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="how-it-works.html">How It Works</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="strings.html">Strings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="faqs.html">FAQs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="events.html">Events</a>
+            </li>
+            </ul>
+            <button class="btn my-2 my-sm-0 navbar-white-button" onclick="goToOrderPage()">Order Now</button>
+        </div></div>
+    </nav>
+    
+    <div class="order-header page-image-header d-flex">
+        <div class="mx-auto my-auto page-header-content">
+            <h1 class="page-header-text mx-auto">Order</h1>
+            <div class="d-flex header-button-wrapper">
+                <button class="btn my-2 my-sm-0 mx-auto white-header-button" onclick="scrollToOrder()">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="order-section">
+        <div class="container">
+            <div class="d-flex mx-auto order-row" style="gap: 20px;">
+                <div class="d-flex order-form-col">
+                    <div class="order-form-wrapper">
+                        <p class="order-form-header text-center">Racket Information</p>
+                        <form id="newRacketForm">
+                            <div class="d-flex justify-content-around racket-model-flex">
+                                <input type="text" class="blue-input" placeholder="Racket Brand" id="racketBrand" required>
+                                <input type="text" class="blue-input" placeholder="Racket Model" id="racketModel" required>
+                            </div>
+                            <div class="d-flex string-provider-flex">
+                                <p class="m-0 select-provider-header">String Provider: </p>
+                                <div class="form-check my-auto d-flex flex-row hoverable">
+                                    <div class="d-flex flex-column justify-content-center hoverable" style="height: 24px;">
+                                        <input class="form-check-input my-auto hoverable" type="radio" name="flexRadioDefault" id="ASProvides" checked onclick="showAdvantageProvidesInputs()">
+                                    </div>
+                                    <label class="form-check-label hoverable" for="ASProvides">Advantage Stringing</label>
+                                </div>
+                                <div class="form-check my-auto d-flex flex-row hoverable">
+                                    <div class="d-flex flex-column justify-content-center hoverable" style="height: 24px;">
+                                        <input class="form-check-input my-auto hoverable" type="radio" name="flexRadioDefault" id="CProvides" onclick="showCustomerProvidesInputs()">
+                                    </div>
+                                    <label class="form-check-label hoverable" for="CProvides">Customer</label>
+                                </div>
+                            </div>
+                            <p class="order-section-small-header">Mains:</p>
+                            <div class="d-flex string-select-flex">
+                                <div class="dropdown d-flex my-auto">
+                                 <select class="form-select dropdown-button mx-auto hoverable" aria-label="mainStringSelect" id="mainStringSelect" required>
+                                    <option selected disabled value="">Select String</option>
+                                    <option value="Hyper G">Hyper G</option>
+                                    <option value="Confidential">Confidential</option>
+                                    <option value="Tour Bite">Tour Bite</option>
+                                    <option value="Wasabi">Wasabi</option>
+                                    <option value="Square-X">Square-X</option>
+                                    <option value="Pro Feel">Pro Feel</option>
+                                    <option value="Pro Tour">Pro Tour</option>
+                                    <option value="Poly Power">Poly Power</option>
+                                    <option value="Kirschbaum SG">Kirschbaum Synthetic Gut</option>
+                                    <option value="Prince XP">Prince XP</option>
+                                    <option value="Cyclone">Cyclone</option>
+                                    <option value="None" disabled>None</option>
+                                  </select>
+                                 <input type="text" class="blue-input my-auto d-none" placeholder="Mains String" id="mainStringInput">
+                             </div>
+                             <div class="tension-select-wrapper d-flex justify-content-center mx-auto">
+                                <div class="d-flex">
+                                    <p class="my-auto" style="margin: 0px; height: fit-content;">Tension: </p>
+                                </div>
+                                <input id="mainTension" type="number" value="55" min="10" max="70" style="color: #0041a9;"/>
+                             </div> 
+                             </div>
+                            <p class="order-section-small-header">Crosses:</p>
+                            <div class="d-flex string-select-flex">
+                                <div class="dropdown d-flex my-auto">
+                                    <select class="form-select dropdown-button mx-auto hoverable" aria-label="crossStringSelect" id="crossStringSelect" required>
+                                        <option selected disabled value="">Select String</option>
+                                        <option value="Hyper G">Hyper G</option>
+                                        <option value="Confidential">Confidential</option>
+                                        <option value="Tour Bite">Tour Bite</option>
+                                        <option value="Wasabi">Wasabi</option>
+                                        <option value="Square-X">Square-X</option>
+                                        <option value="Pro Feel">Pro Feel</option>
+                                        <option value="Pro Tour">Pro Tour</option>
+                                        <option value="Poly Power">Poly Power</option>
+                                        <option value="Kirschbaum SG">Kirschbaum Synthetic Gut</option>
+                                        <option value="Prince XP">Prince XP</option>
+                                        <option value="Cyclone">Cyclone</option>
+                                        <option value="None" disabled>None</option>
+                                     </select>
+                                    <input type="text" class="blue-input my-auto d-none" placeholder="Crosses String" id="crossStringInput">
+                                </div>
+                             <div class="tension-select-wrapper d-flex justify-content-center mx-auto">
+                                <div class="d-flex">
+                                    <p class="my-auto" style="margin: 0px; height: fit-content;">Tension: </p>
+                                </div>
+                                <input id="crossTension" type="number" value="55" min="10" max="70" style="color: #0041a9;"/>
+                             </div> 
+                            </div>
+                            <p class="add-ons-header order-section-small-header" style="margin-bottom: 15px;">Add Ons:</p>
+                            <div class="d-flex add-ons-flex">
+                                <button class="selection-button mx-auto" id="grommetButton">Grommet Replacement</button>
+                                <button class="selection-button mx-auto" id="gripButton">Grip Replacement</button>
+                                <button class="selection-button mx-auto" id="shockButton">Shock Absorber</button>
+                            </div>
+                            <div class="d-flex add-racket-flex">
+                                <button type="submit" class="btn mb-3 solid-blue-button my-auto mx-auto" id="addRacketButton">Add Racket</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="d-flex order-summary-col justify-content-between flex-column">
+                    <div class="order-summary-wrapper">
+                        <p class="order-form-header text-center">Order Summary</p>
+                        <div class="racket-summary-wrapper">
+                            <div class="racket-summary d-none" id="racketItem1">
+                                <div class="d-flex" style="gap: 10px;">
+                                    <p class="racket-header my-auto" id="racketLabel">Racket 1</p>
+                                    <i class="tension-change my-auto bi-trash-fill delete-button hoverable"></i>
+                                </div>
+                                <p id="racketModel"></p>
+                                <p id="mainsInfo"></p>
+                                <p id="crossesInfo"></p>
+                                <p id="providerInfo"></p>
+                                <p id="addOnsInfo"></p>
+                                <p id="priceInfo"></p>
+                            </div>
+                            <div class="no-rackets-placeholder" id="racketPlaceholder">
+                                <p class="text-center m-3" style="font-size: 20px;">No rackets yet!</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div>
+                        <p style="margin-top: 20px;" id="totalOrderPrice">Total: $0.00</p>
+                        <div class="d-flex">
+                            <button type="submit" class="btn mb-3 solid-blue-button my-auto mx-auto" onclick="openContactInfoModal()">Finalize</button>
+                        </div>
+                        <div class="modal fade" id="contactInfoModal" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title">Contact Information</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <form id="contactInfoForm">
+                                    <div class="modal-body">
+                                        <div class="d-flex justify-content-around" style="gap: 20px;">
+                                            <input type="text" class="blue-input" placeholder="First Name" id="contactFirstName" required>
+                                            <input type="text" class="blue-input" placeholder="Last Name" id="contactLastName" required>
+                                        </div>
+                                        <input type="text" class="blue-input" placeholder="Email / Phone Number" id="contactContactInfo" required>
+                                        <textarea class="form-control blue-textarea" id="contactNotes" rows="3" placeholder="Notes / special instructions"></textarea>
+                                        <p style="margin-bottom: 10px;">I need my racket strung within: </p>
+                                        <div class="d-flex justify-content-around racket-speed-flex" style="gap: 20px;">
+                                            <button class="selection-button mx-auto" id="turnaround1">2-24 hrs</button>
+                                            <button class="selection-button mx-auto" id="turnaround2">1-2 days</button>
+                                            <button class="selection-button mx-auto" id="turnaround3">2+ days</button>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="submit" class="btn solid-blue-button mx-auto" id="completeOrderButton">Complete Order</button>
+                                    </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title">Order Complete</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-center">Order Placed!</p>
+                                    <p class="text-center">We will contact you shortly to arrange pickup and dropoff</p>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn solid-blue-button mx-auto" data-dismiss="modal">Done</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="how-to-section">
+        <div class="container">
+            <p class="how-to-header text-center">How To Order</p>
+            <div class="d-flex row-flex mx-auto">
+                <div class="d-flex how-to-col mx-auto">
+                    <div class="d-flex flex-column">
+                        <div class="blue-circle d-flex mx-auto">
+                            <p class="step-text text-center mx-auto my-auto">1</p>
+                        </div>
+                        <p class="how-to-col-header text-center">Select Strings</p>
+                        <p class="how-to-col-body text-center">Pick your favorite strings from our inventory, or bring your own!</p>
+                    </div>
+                </div>
+                <div class="d-flex how-to-col mx-auto">
+                    <div class="d-flex flex-column">
+                        <div class="blue-circle d-flex mx-auto">
+                            <p class="step-text text-center mx-auto my-auto">2</p>
+                        </div>
+                        <p class="how-to-col-header text-center">Place Order</p>
+                        <p class="how-to-col-body text-center">Place an order through our order form, or contact us with your arrangements</p>
+                    </div>
+                </div>
+                <div class="d-flex how-to-col mx-auto">
+                    <div class="d-flex flex-column">
+                        <div class="blue-circle d-flex mx-auto">
+                            <p class="step-text text-center mx-auto my-auto">3</p>
+                        </div>
+                        <p class="how-to-col-header text-center">Drop Off</p>
+                        <p class="how-to-col-body text-center">The AS team will reach out to arrange a drop-off time, location, and payment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="contact-info-section">
+        <div class="container">
+            <p class="contact-info-large-text text-center mx-auto">Need help with your order?</p>
+            <p class="contact-info-small-text text-center mx-auto">If you want assistance with choosing strings and tension, contact us with your questions. We also take orders through direct message, text, call, and email.</p>
+            <div class="row mx-auto">
+                <div class="col">
+                    <div class="contact-element-wrapper d-flex flex-column hoverable" onclick="openQuestionModal()">
+                        <i class="bi-chat-fill mx-auto contact-icon"></i>
+                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px;">Direct Messages</p>
+                        <p class="contact-info-tiny-text text-center">Click Here</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="contact-element-wrapper d-flex flex-column">
+                        <div class="mx-auto d-flex" style="gap: 7px;">
+                            <i class="bi-telephone-fill mx-auto contact-icon" style="margin-right: 5px;"></i>    
+                            <i class="bi-chat-left-text-fill mx-auto contact-icon" style="margin-left: 5px;"></i>    
+                        </div>
+                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px;">Call or Text</p>
+                        <p class="contact-info-tiny-text text-center phone-text-white">651-504-4842</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="contact-element-wrapper d-flex flex-column">
+                        <i class="bi-envelope-fill mx-auto contact-icon"></i>
+                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px;">Email Us</p>
+                        <p class="contact-info-tiny-text text-center">AdvantageStringers@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="questionModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">How can we help?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="questionForm">
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-around" style="gap: 20px;">
+                            <input type="text" class="blue-input" placeholder="First Name" id="questionFirstName" required>
+                            <input type="text" class="blue-input" placeholder="Last Name" id="questionLastName" required>
+                        </div>
+                        <input type="text" class="blue-input" placeholder="Email / Phone Number" id="questionContactInfo" required>
+                        <textarea class="form-control blue-textarea" id="questionMessage" rows="3" placeholder="Question / Message" required></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn solid-blue-button mx-auto" id="askQuestionButton">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="questionConfirmationModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Order Complete</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <p class="text-center">Message Sent!</p>
+                <p class="text-center">We will get back to you as soon as possible.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn solid-blue-button mx-auto" data-dismiss="modal">Done</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="newsletter-signup-section">
+        <div class="container">
+            <p class="newsletter-large-text text-center">Sign Up and Save</p>
+            <p class="newsletter-small-text text-center">Sign up now to recieve special offers, immediate announcements, and free giveaways</p>
+            <div class="d-flex mx-auto" style="margin-bottom: 10px;">
+                <input type="email" class="form-control newsletter-input-field mx-auto my-auto" id="subscribeEmailInput" placeholder="Enter your email">
+                <button type="submit" class="btn mb-3 solid-blue-button my-auto" id="subscribeInputButton" onclick="sendSubscribeEmail()">Subscribe</button>
+            </div>
+            <div class="d-flex mx-auto">
+                <p class="newsletter-small-text text-center mx-auto d-none" id="subscribeConfirmationWrapper">Thanks for Subscribing!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-section">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-6 mx-auto">
+                    <p class="footer-large-text">Advantage Stringing</p>
+                    <p class="footer-medium-text phone-text-white">651-504-4642</p>
+                    <p class="footer-medium-text">AdvantageStringers@gmail.com</p>
+                </div>
+                <div class="col-2 mx-auto">
+                    <p class="footer-small-text hoverable" onclick="goToOrderPage()">Order</p>
+                    <p class="footer-small-text hoverable" onclick="goToHowToPage()">How It Works</p>
+                    <p class="footer-small-text hoverable" onclick="goToHomePage()">Home</p>
+                    <p class="footer-small-text hoverable" onclick="goToStringsPage()">Strings</p>
+                </div>
+                <div class="col-2 mx-auto">
+                    <p class="footer-small-text hoverable" onclick="goToAboutPage()">About</p>
+                    <p class="footer-small-text hoverable" onclick="goToFAQsPage()">FAQs</p>
+                    <p class="footer-small-text hoverable" onclick="goToEventsPage()">Events</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="global-js.js"></script>
+    <script type="module">
+        import {InputSpinner} from "./InputSpinner.js"
+    
+        const inputSpinnerElements = document.querySelectorAll("input[type='number']")
+        for (const inputSpinnerElement of inputSpinnerElements) {
+            new InputSpinner(inputSpinnerElement)
+        }
+    </script>
+</body>
+
+<script>
+
+    const deluxeStrings = ["Hyper G", "Confidential", "Tour Bite", "Wasabi"]
+
+    const scrollToOrder = () => {
+        $('.order-form-col')[0].scrollIntoView({behavior: "smooth"});
+    }
+
+
+    //Toggle between inputs for String Provider
+
+    var stringProvider = 0;
+
+    const showCustomerProvidesInputs = () => {
+        $("#mainStringSelect").addClass('d-none');
+        $("#crossStringSelect").addClass('d-none');
+        $("#crossStringInput").removeClass('d-none');
+        $("#mainStringInput").removeClass('d-none');
+        $("#mainStringSelect").val('None');
+        $("#crossStringSelect").val('None');
+        stringProvider = !stringProvider;
+    }
+
+    const showAdvantageProvidesInputs = () => {
+        $("#crossStringInput").addClass('d-none');
+        $("#mainStringInput").addClass('d-none');
+        $("#mainStringSelect").removeClass('d-none');
+        $("#crossStringSelect").removeClass('d-none');
+        $("#mainStringSelect").val("");
+        $("#crossStringSelect").val("");
+        stringProvider = !stringProvider;
+    }
+
+    // Get inputs for add ons
+
+    var grommets = 0;
+    var grip = 0;
+    var shock = 0;
+
+    $("#grommetButton").click(function(e) {
+        e.preventDefault();
+        if(grommets) {
+            $("#grommetButton").removeClass('selection-button-selected');
+        } else {
+            $("#grommetButton").addClass('selection-button-selected');
+        }
+        grommets = !grommets;
+    })
+    $("#gripButton").click(function(e) {
+        e.preventDefault();
+        if(grip) {
+            $("#gripButton").removeClass('selection-button-selected');
+        } else {
+            $("#gripButton").addClass('selection-button-selected');
+        }
+        grip = !grip;
+    })
+    $("#shockButton").click(function(e) {
+        e.preventDefault();
+        if(shock) {
+            $("#shockButton").removeClass('selection-button-selected');
+        } else {
+            $("#shockButton").addClass('selection-button-selected');
+        }
+        shock = !shock;
+    })
+
+
+    var turnaroundTime = 0;
+
+    $("#turnaround1").click(function(e) {
+        e.preventDefault();
+        for(let i=1; i<4; i++) {
+            if(i == 1 && !$("#turnaround"+i).hasClass('selection-button-selected')) {
+                $("#turnaround"+i).addClass('selection-button-selected');
+                turnaroundTime = 1;
+            } else if($("#turnaround"+i).hasClass('selection-button-selected')) {
+                $("#turnaround"+i).removeClass('selection-button-selected');
+                turnaroundTime = 0;
+            }
+        }
+    });
+    $("#turnaround2").click(function(e) {
+        e.preventDefault();
+        for(let i=1; i<4; i++) {
+            if(i == 2 && !$("#turnaround"+i).hasClass('selection-button-selected')) {
+                $("#turnaround"+i).addClass('selection-button-selected');
+                turnaroundTime = 2;
+            } else if($("#turnaround"+i).hasClass('selection-button-selected')) {
+                $("#turnaround"+i).removeClass('selection-button-selected');
+                turnaroundTime = 0;
+            }
+        }
+    });
+    $("#turnaround3").click(function(e) {
+        e.preventDefault();
+        for(let i=1; i<4; i++) {
+            if(i == 3 && !$("#turnaround"+i).hasClass('selection-button-selected')) {
+                $("#turnaround"+i).addClass('selection-button-selected');
+                turnaroundTime = 3;
+            } else if($("#turnaround"+i).hasClass('selection-button-selected')) {
+                $("#turnaround"+i).removeClass('selection-button-selected');
+                turnaroundTime = 0;
+            }
+        }
+        
+    })
+
+    
+
+    var racketList = [];
+    var orderTotal = 0;
+
+    function Racket(number, brand, model, provider, main, mainTension, cross, crossTension, price, grommets, grip, shock) {
+        this.number = number;
+        this.brand = brand;
+        this.model = model;
+        this.provider = provider;
+        this.main = main;
+        this.mainTension = mainTension;
+        this.cross = cross;
+        this.crossTension = crossTension;
+        this.grommets = grommets;
+        this.grip = grip;
+        this.shock = shock;
+        this.price = price;
+        this.subNumber = function() {
+            this.number -= 1;
+            console.log(this.number);
+        }
+    }
+
+    function ContactInfo(first, last, contact, notes, timeline) {
+        this.first = first;
+        this.last = last;
+        this.contact = contact;
+        this.notes = notes;
+        this.timeline = timeline;
+    }
+
+    $("#newRacketForm").on('submit', function(e) {
+        e.preventDefault();
+        var price = 0;
+        var mainsString;
+        var crossesString;
+
+        if(stringProvider == 0) {
+            if(deluxeStrings.includes($("#mainStringSelect").val()) | deluxeStrings.includes($("#crossStringSelect").val())) {
+                price = 25;
+            } else {
+                price = 20;
+            }
+            mainsString = $("#mainStringSelect").val();
+            crossesString = $("#crossStringSelect").val();
+        } else {
+            price = 15;
+            mainsString = $("#mainStringInput").val();
+            crossesString = $("#crossStringInput").val();
+        }
+
+        if (grommets) {
+            price += 10;
+        }
+        if (grip) {
+            price += 5;
+        }
+        if (shock) {
+            price += 3;
+        }
+
+        orderTotal += price;
+
+        let newRacket = new Racket(
+            racketList.length+1,
+            $("#racketBrand").val(),
+            $("#racketModel").val(),
+            stringProvider,
+            mainsString,
+            $("#mainTension").val(),
+            crossesString,
+            $("#crossTension").val(),
+            price,
+            grommets,
+            grip,
+            shock
+        );
+
+        racketList.push(newRacket);
+        console.log(racketList);
+
+        const calcAddOns = () => {
+            var output = "";
+            newRacket.grommets ? output += "Grommets, " : null;
+            newRacket.grip ? output += "Grip, " : null;
+            newRacket.shock ? output += "Shock" : null;
+            if(output.slice(-1) == " ") {
+                return output.slice(0, -2);
+            } else if (output == "") {
+                output = "None";
+            }
+            return output;
+        }
+
+        if(racketList.length === 1) {
+            $("#racketItem1").removeClass("d-none");
+            $("#racketPlaceholder").addClass("d-none");
+        } else if(racketList.length > 1) {
+            $("#racketItem1").clone().prop("id", "racketItem" + newRacket.number).appendTo(".racket-summary-wrapper");
+        } 
+
+        $(".racket-summary-wrapper").scrollTop($(".racket-summary-wrapper")[0].scrollHeight);
+
+        $("#racketItem" + newRacket.number + " .delete-button").attr("onclick", "deleteRacket(" + newRacket.number + ")");
+
+        $("#racketItem" + newRacket.number + " #racketLabel").html("Racket " + newRacket.number);
+        $("#racketItem" + newRacket.number + " #racketModel").html("Brand/Model: " + newRacket.brand + " " + newRacket.model);
+        $("#racketItem" + newRacket.number + " #mainsInfo").html("Mains: " + newRacket.main + ", " + newRacket.mainTension + " lbs");
+        $("#racketItem" + newRacket.number + " #crossesInfo").html("Crosses: " + newRacket.cross + ", " + newRacket.crossTension + " lbs");
+        $("#racketItem" + newRacket.number + " #providerInfo").html("String Provider: " + (newRacket.provider ? "Customer" : "Advantage Stringing"));
+        $("#racketItem" + newRacket.number + " #addOnsInfo").html("Add Ons: " + calcAddOns());
+        $("#racketItem" + newRacket.number + " #priceInfo").html("Price: $" + newRacket.price + ".00");
+
+        $("#totalOrderPrice").html("Total: $" + orderTotal + ".00");
+
+        // Reset form inputs
+        $("#racketBrand").val("");
+        $("#racketModel").val("");
+
+        // TODO: find out how to reset radio buttons
+
+        // Reset string select buttons
+        $("#mainStringInput").val("");
+        $("#crossStringInput").val("");
+        $("#mainStringSelect").val("");
+        $("#crossStringSelect").val("");
+        
+        // Reset add ons buttons
+        if ($("#grommetButton").hasClass('selection-button-selected')) {
+            $("#grommetButton").removeClass('selection-button-selected');
+        }
+        if ($("#gripButton").hasClass('selection-button-selected')) {
+            $("#gripButton").removeClass('selection-button-selected');
+        }
+        if ($("#shockButton").hasClass('selection-button-selected')) {
+            $("#shockButton").removeClass('selection-button-selected');
+        }
+        
+        grommets = 0;
+        grip = 0;
+        shock = 0;
+
+    })
+
+    let orderContactInfo;
+
+    $("#contactInfoForm").on('submit', async function(e) {
+        console.log("super list", racketList);
+        e.preventDefault();
+        //Put invalid form input handling here
+        orderContactInfo = new ContactInfo(
+            $("#contactFirstName").val(),
+            $("#contactLastName").val(),
+            $("#contactContactInfo").val(),
+            $("#contactNotes").val(),
+            turnaroundTime
+        )
+
+        // Clear forms
+        $("#contactFirstName").val("");
+        $("#contactLastName").val("");
+        $("#contactContactInfo").val("");
+        $("#contactNotes").val("");
+
+        for(let i=1; i<4; i++) {
+            if ($("#turnaround"+i).hasClass('selection-button-selected')) {
+                $("#turnaround"+i).removeClass('selection-button-selected');
+            }
+        }
+
+        turnaroundTime = 0;
+
+        console.log("before list: ", racketList);
+
+        //Send order information email
+        await sendOrderEmail(racketList, orderContactInfo);
+
+        // Reset Inputs and clear summary list
+        if(racketList.length > 1) {
+            for(let i=1; i<racketList.length; i++) {
+                $("#racketItem" + (i+1)).remove();
+            }
+        } 
+        $("#totalOrderPrice").html("Total: $0.00");
+
+        $("#racketItem1").addClass("d-none");
+        $("#racketPlaceholder").removeClass("d-none");
+    
+        // Hide current screen
+        $("#contactInfoModal").modal('hide');
+
+        setTimeout(function(){
+            //  Move to confirmation modal
+            $("#confirmationModal").modal('show');
+            var racketList = [];
+            var orderTotal = 0;
+        }, 700);
+    });
+
+    const openContactInfoModal = () => {
+        if(racketList.length > 0) {
+            $("#contactInfoModal").modal('show');
+        }
+    }
+
+    function sendSubscribeEmail() {
+        if($("#subscribeEmailInput").val() != "") {
+            sendQuestionEmail({
+                customer_name: "Advantage Stringing Customer",
+                contact_info: $("#subscribeEmailInput").val(),
+                message: "Customer has subscribed to the Advantage Stringing email list"
+            })
+            $("#subscribeEmailInput").val("");
+            $("#subscribeEmailInput").addClass("d-none");
+            $("#subscribeInputButton").addClass("d-none");
+            $("#subscribeConfirmationWrapper").removeClass("d-none");
+        }
+    }
+
+    const openQuestionModal = () => {
+        $("#questionModal").modal('show');
+    }
+
+    $("#questionForm").on('submit', function(e) {
+        e.preventDefault();
+        
+        let newQuestion = new Question(
+            $("#questionFirstName").val(),
+            $("#questionLastName").val(),
+            $("#questionContactInfo").val(),
+            $("#questionMessage").val()
+        )
+
+        // Clear form
+        $("#questionFirstName").val("")
+        $("#questionLastName").val("")
+        $("#questionContactInfo").val("")
+        $("#questionMessage").val("")
+
+        // Send message to us
+        sendQuestionEmail(newQuestion);
+
+        $("#questionModal").modal('hide');
+
+        setTimeout(function(){
+            //  Move to confirmation modal
+            $("#questionConfirmationModal").modal('show');
+        }, 700);
+    });
+
+    function deleteRacket(ind) {
+        let racket = racketList[ind-1];
+
+        // remove the racket from the racket list
+        racketList.splice(ind-1, 1);
+
+        orderTotal -= racket.price;
+        $("#totalOrderPrice").html("Total: $" + orderTotal + ".00");
+    
+        if(racketList.length === 0) {
+            $("#racketPlaceholder").css("display", "block");
+            $("#racketItem1").css("display", "none");
+        } else if(racketList.length >= 1) {
+            $("#racketItem" + ind).remove();
+
+            for(let i=ind-1; i<racketList.length; i++) {
+                racketList[i].subNumber();
+                document.getElementById('racketItem' + (racketList[i].number+1)).setAttribute('id', 'racketItem' + racketList[i].number);
+                $("#racketItem" + racketList[i].number + " .deleteBtn").attr("onclick", "deleteRacket(" + racketList[i].number + ")");
+                $("#racketItem" + racketList[i].number + " #racketLabel").html("Racket " + racketList[i].number);
+            }
+        }
+    }
+
+</script>
+</html>

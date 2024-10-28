@@ -1,0 +1,140 @@
+.pricing-section {
+    padding: 25px;
+    max-width: 950px;
+}
+
+.pricing-section li {
+    margin-bottom: 3px;
+}
+
+.pricing-section .card {
+    max-width: 240px;
+    width: 95%;
+}
+
+.pricing-section .solid-blue-button,
+.pricing-section .outline-blue-button,
+.pricing-section .outline-gray-button,
+.pricing-section .outline-gold-button {
+    width: 80%;
+    font-size: 17px;
+}
+
+.how-to-section .pricing-wrapper {
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 10px;
+}
+
+.how-to-section .pricing-inner-wrapper {
+    width: 100%;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.divider-line {
+    max-width: 160px;
+    width: 95%;
+    border-bottom: 2px solid #0041A9;
+}
+
+.how-to-header {
+    background-image: url('./Images/FAQsHeader.png');
+    min-height: calc(60vh);
+}
+
+.how-to-section .small-container {
+    max-width: 800px;
+}
+
+.how-to-section {
+    padding: 30px 0px;
+}
+
+.how-to-circle-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+}
+
+.how-to-section-header {
+    font-size: 22px;
+    font-weight: 600;
+    color: #0041A9;
+    margin-bottom: 10px;
+}
+
+.how-to-section-text {
+    margin: 0px;
+}
+
+
+.how-to-section .d-flex.row-flex,
+.how-to-section .d-flex.reverse-row-flex {
+    max-width: 850px;
+    width: 95%;
+    gap: 30px;
+    margin-top: 35px;
+    height: fit-content;
+}
+
+.pricing-card-title {
+    font-size: 30px;
+}
+
+@media (max-width: 1000px) {
+    .how-to-section .container {
+        max-width: 95%;
+    }
+    .how-to-section .d-flex.row-flex {
+        gap: 15px;
+    }
+    .how-to-section .solid-blue-button {
+        margin-top: 15px;
+    }
+    
+}
+
+@media (max-width: 840px) {
+    .pricing-section .pricing-wrapper {
+        flex-direction: column;
+    }
+    .pricing-wrapper .pricing-inner-wrapper {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 620px) {
+    .how-to-section .how-to-section-header {
+        text-align: center;
+    }
+    .how-to-section .how-to-section-text {
+        text-align: center;
+    }
+    .how-to-section .d-flex.row-flex {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 40px;
+    }
+    .how-to-section .d-flex.reverse-row-flex {
+        flex-direction: column-reverse;
+        gap: 20px;
+        margin-top: 40px;
+    }
+    .how-to-circle-img {
+        max-width: 240px;
+    }
+    .how-to-section .solid-blue-button {
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 520px) {
+    .pricing-wrapper .pricing-inner-wrapper {
+        flex-direction: column;
+    }
+    .pricing-wrapper .card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
