@@ -39,6 +39,26 @@
     color: #fff;
 }
 
+.location-section .d-flex {
+    justify-content: center;
+    gap: 10px;
+}
+
+.location-section .location-icon {
+    font-size: 40px;
+    color: #fff;
+    width: auto;
+}
+
+.location-section .location-icon::before {
+    margin-bottom: 7px;
+}
+
+.location-section .location-text {
+    font-size: 24px;
+    color: #fff;
+}
+
 .nav-image {
     width: 100%;
     height: 300px;
@@ -208,6 +228,19 @@
     }
     .rsvl-ad-section .img-col {
         margin-top: 20px;
+    }
+}
+
+@media (max-width: 580px) {
+    .location-section .d-flex {
+        flex-direction: column;
+    }
+    .location-section .location-icon {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .location-section .location-text {
+        text-align: center;
     }
 }
 
