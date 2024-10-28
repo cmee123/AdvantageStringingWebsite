@@ -1,3 +1,6 @@
+body {
+    overflow-x: hidden;
+}
 
 .index-header {
     background-image: url('./Images/IndexHeader3.jpg');

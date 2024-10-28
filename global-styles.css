@@ -1,5 +1,9 @@
+.nav-spacer {
+    height: 56px;
+}
+
 .phone-text-white {
-    color: #fff;
+    color: #fff !important;
 }
 
 .navbar-white-button {
