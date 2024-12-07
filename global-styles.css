@@ -273,6 +273,17 @@ button:focus {
     .footer-section .col-2 {
         min-width: 300px;
     }
+    .page-header-text {
+        font-size: 30px;
+        margin: 0px;
+    }
+    .page-header-sub-text {
+        font-size: 22px;
+        margin: 0px;
+    }
+    .white-header-button {
+        font-size: 17px;
+    }
 }
 
 @media (max-width: 770px) {

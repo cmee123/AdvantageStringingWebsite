@@ -74,3 +74,12 @@
 .results-col .tournament-body-text {
     font-weight: 600;
 }
+
+@media (max-width: 500px) {
+    .tournament-content-wrapper {
+        flex-direction: column;
+    }
+    .results-col {
+        margin-top: 15px;
+    }
+}
