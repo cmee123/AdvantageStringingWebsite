@@ -32,7 +32,6 @@ class Question{
 }
 
 async function sendOrderEmail(racketList, contactInfo) {
-    console.log("sfhdfj: ", racketList);
     const formatAddOns = (racket) => {
         var output = "";
         racketList[racket].grommets ? output += "Grommets, " : null;
@@ -46,13 +45,23 @@ async function sendOrderEmail(racketList, contactInfo) {
         return output;
     }
 
+    var timelineOutput = "";
+
+    if(contactInfo.timeline == 1) {
+        timelineOutput = "2-24hrs";
+    } else if (contactInfo.timeline == 2) {
+        timelineOutput = "1-2 days";
+    } else if(contactInfo.timeline == 3) {
+        timelineOutput = "2+ days";
+    }
+
     var racketListOutput = "";
 
     for(let racket = 0; racket < racketList.length; racket++) {
         racketListOutput += 
             "Racket " + racketList[racket].number + ": \n" +
             (racketList[racket].provider ? "String provider: Customer\n" : "String provider: Advantage Stringing\n") +
-            racketList[racket].brand + " " + racketList[racket].model + "\n" +
+            "Racket Model: " + racketList[racket].brand + " " + racketList[racket].model + "\n" +
             "Mains: " + racketList[racket].main + ", " + racketList[racket].mainTension + " lbs\n" +
             "Crosses: " + racketList[racket].cross + ", " + racketList[racket].crossTension + " lbs\n" +
             "Add ons: " + formatAddOns(racket) + "\n\n"
@@ -61,7 +70,7 @@ async function sendOrderEmail(racketList, contactInfo) {
     outputList = {
         customer_name: contactInfo.first + " " + contactInfo.last,
         contact_info: contactInfo.contact,
-        timeline: contactInfo.timeline,
+        timeline: timelineOutput,
         notes: contactInfo.notes,
         rackets: racketListOutput
     }
