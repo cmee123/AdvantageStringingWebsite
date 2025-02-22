@@ -1,0 +1,139 @@
+.pricing-section {
+    padding: 25px;
+    max-width: 650px;
+}
+
+.pricing-section li {
+    margin-bottom: 3px;
+}
+
+.pricing-section .card {
+    max-width: 240px;
+    width: 95%;
+}
+
+.pricing-section .solid-blue-button,
+.pricing-section .outline-blue-button,
+.pricing-section .outline-gray-button,
+.pricing-section .outline-gold-button {
+    width: 80%;
+    font-size: 17px;
+}
+
+.badminton-section .pricing-wrapper {
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 10px;
+}
+
+.badminton-section .pricing-inner-wrapper {
+    width: 100%;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.divider-line {
+    max-width: 160px;
+    width: 95%;
+    border-bottom: 2px solid #0041A9;
+}
+
+.badminton-header {
+    background-image: url('./Images/BadmintonHeader.jpg');
+    min-height: calc(40vh);
+}
+
+.badminton-section .small-container {
+    max-width: 800px;
+}
+
+.badminton-section {
+    padding: 30px 0px;
+}
+
+.badminton-circle-img {
+    width: auto;
+    height: 250px;
+}
+
+.badminton-section-header {
+    font-size: 22px;
+    font-weight: 600;
+    color: #0041A9;
+    margin-bottom: 10px;
+}
+
+.badminton-section-text {
+    margin: 0px;
+}
+
+
+.badminton-section .d-flex.row-flex,
+.badminton-section .d-flex.reverse-row-flex {
+    max-width: 850px;
+    width: 95%;
+    gap: 30px;
+    margin-top: 35px;
+    height: fit-content;
+}
+
+.pricing-card-title {
+    font-size: 30px;
+}
+
+@media (max-width: 1000px) {
+    .badminton-section .container {
+        max-width: 95%;
+    }
+    .badminton-section .d-flex.row-flex {
+        gap: 15px;
+    }
+    .badminton-section .solid-blue-button {
+        margin-top: 15px;
+    }
+    
+}
+
+@media (max-width: 840px) {
+    .pricing-section .pricing-wrapper {
+        flex-direction: column;
+    }
+    .pricing-wrapper .pricing-inner-wrapper {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 620px) {
+    .badminton-section .badminton-section-header {
+        text-align: center;
+    }
+    .badminton-section .badminton-section-text {
+        text-align: center;
+    }
+    .badminton-section .d-flex.row-flex {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 40px;
+    }
+    .badminton-section .d-flex.reverse-row-flex {
+        flex-direction: column-reverse;
+        gap: 20px;
+        margin-top: 40px;
+    }
+    .badminton-circle-img {
+        max-width: 240px;
+    }
+    .badminton-section .solid-blue-button {
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 520px) {
+    .pricing-wrapper .pricing-inner-wrapper {
+        flex-direction: column;
+    }
+    .pricing-wrapper .card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

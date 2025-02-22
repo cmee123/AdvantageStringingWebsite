@@ -10,6 +10,9 @@ const goToStringsPage = () => {
 const goToPricingPage = () => {
     location.href = "pricing.html"
 }
+const goToBadmintonPage = () => {
+    location.href = "badminton.html"
+}
 const goToAboutPage = () => {
     location.href = "about.html"
 }
