@@ -27,10 +27,11 @@ const goToFAQsPage = () => {
 }
 
 class Question{
-    constructor(first_name, last_name, contact_info, message) {
+    constructor(first_name, last_name, contact_info, message, to_email) {
         this.customer_name = first_name + " " + last_name;
         this.contact_info = contact_info;
         this.message = message;
+        this.to_email = to_email;
     }
 }
 
@@ -75,7 +76,8 @@ async function sendOrderEmail(racketList, contactInfo) {
         contact_info: contactInfo.contact,
         timeline: timelineOutput,
         notes: contactInfo.notes,
-        rackets: racketListOutput
+        rackets: racketListOutput,
+        to_email: contactInfo.email
     }
 
     emailjs.send("AdvantageStringing", "order_template", outputList)
@@ -89,7 +91,8 @@ function sendQuestionEmail(question) {
     var outputList = {
         customer_name: question.customer_name,
         contact_info: question.contact_info,
-        question: question.message
+        question: question.message,
+        to_email: question.to_email
     }
 
     emailjs.send("AdvantageStringing", "question_template", outputList)

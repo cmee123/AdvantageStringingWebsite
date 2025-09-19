@@ -58,9 +58,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="faqs.html">FAQs</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="events.html">Events</a>
-            </li>
             </ul>
             <button class="btn my-2 my-sm-0 navbar-white-button" onclick="goToOrderPage()">Order Now</button>
         </div></div>
@@ -106,18 +103,21 @@
                                 <div class="dropdown d-flex my-auto">
                                  <select class="form-select dropdown-button mx-auto hoverable" aria-label="mainStringSelect" id="mainStringSelect" required>
                                     <option selected disabled value="">Select String</option>
-                                    <option value="Hyper G">Hyper G</option>
-                                    <option value="Confidential">Confidential</option>
-                                    <option value="Tour Bite">Tour Bite</option>
-                                    <option value="Wasabi">Wasabi</option>
-                                    <option value="Square-X">Square-X</option>
-                                    <option value="Pro Feel">Pro Feel</option>
-                                    <option value="Pro Tour">Pro Tour</option>
-                                    <option value="Poly Power">Poly Power</option>
-                                    <option value="Kirschbaum SG">Kirschbaum Synthetic Gut</option>
-                                    <option value="Prince XP">Prince XP</option>
+                                    <option value="Hyper G">Solinco Hyper G</option>
+                                    <option value="Confidential">Solinco Confidential</option>
+                                    <option value="Tour Bite">Solinco Tour Bite</option>
+                                    <option value="Wasabi">Toroline Wasabi</option>
+                                    <option value="Solstice Power">Solstice Power</option>
+                                    <option value="Evolution">Evolution</option>
+                                    <option value="Solstice Black">Solstice Black</option>
+                                    <option value="Elite XT">Elite XT</option>
+                                    <option value="Pro X">Pro X</option>
+                                    <option value="Dark Matter">Dark Matter</option>
+                                    <option value="Flash">Flash</option>
                                     <option value="Cyclone">Cyclone</option>
+                                    <option value="Prince SG">Prince Synthetic Gut</option>
                                     <option value="BG65ti Badminton">BG65ti Badminton</option>
+                                    <option value="Tourna Racketball">Tourna Racketball</option>
                                     <option value="None" disabled>None</option>
                                   </select>
                                  <input type="text" class="blue-input my-auto d-none" placeholder="Mains String" id="mainStringInput">
@@ -134,19 +134,22 @@
                                 <div class="dropdown d-flex my-auto">
                                     <select class="form-select dropdown-button mx-auto hoverable" aria-label="crossStringSelect" id="crossStringSelect" required>
                                         <option selected disabled value="">Select String</option>
-                                        <option value="Hyper G">Hyper G</option>
-                                        <option value="Confidential">Confidential</option>
-                                        <option value="Tour Bite">Tour Bite</option>
-                                        <option value="Wasabi">Wasabi</option>
-                                        <option value="Square-X">Square-X</option>
-                                        <option value="Pro Feel">Pro Feel</option>
-                                        <option value="Pro Tour">Pro Tour</option>
-                                        <option value="Poly Power">Poly Power</option>
-                                        <option value="Kirschbaum SG">Kirschbaum Synthetic Gut</option>
-                                        <option value="Prince XP">Prince XP</option>
-                                        <option value="Cyclone">Cyclone</option>
-                                        <option value="BG65ti Badminton">BG65ti Badminton</option>
-                                        <option value="None" disabled>None</option>
+                                    <option value="Hyper G">Solinco Hyper G</option>
+                                    <option value="Confidential">Solinco Confidential</option>
+                                    <option value="Tour Bite">Solinco Tour Bite</option>
+                                    <option value="Wasabi">Toroline Wasabi</option>
+                                    <option value="Solstice Power">Solstice Power</option>
+                                    <option value="Evolution">Evolution</option>
+                                    <option value="Solstice Black">Solstice Black</option>
+                                    <option value="Elite XT">Elite XT</option>
+                                    <option value="Pro X">Pro X</option>
+                                    <option value="Dark Matter">Dark Matter</option>
+                                    <option value="Flash">Flash</option>
+                                    <option value="Cyclone">Cyclone</option>
+                                    <option value="Prince SG">Prince Synthetic Gut</option>
+                                    <option value="BG65ti Badminton">BG65ti Badminton</option>
+                                    <option value="Tourna Racketball">Tourna Racketball</option>
+                                    <option value="None" disabled>None</option>
                                      </select>
                                     <input type="text" class="blue-input my-auto d-none" placeholder="Crosses String" id="crossStringInput">
                                 </div>
@@ -212,6 +215,11 @@
                                             <input type="text" class="blue-input" placeholder="Last Name" id="contactLastName" required>
                                         </div>
                                         <input type="text" class="blue-input" placeholder="Email / Phone Number" id="contactContactInfo" required>
+                                        <select class="form-select dropdown-button mx-auto hoverable blue-input" aria-label="locationContactInfo" id="locationContactInfo" required>
+                                            <option selected disabled value="">Location</option>
+                                            <option value="Saint Paul">Saint Paul</option>
+                                            <option value="Minneapolis">Minneapolis</option>
+                                        </select>
                                         <textarea class="form-control blue-textarea" id="contactNotes" rows="3" placeholder="Notes / special instructions"></textarea>
                                         <p style="margin-bottom: 10px;">I need my racket strung within: </p>
                                         <div class="d-flex justify-content-around racket-speed-flex" style="gap: 20px;">
@@ -292,12 +300,12 @@
     <div class="contact-info-section">
         <div class="container">
             <p class="contact-info-large-text text-center mx-auto">Need help with your order?</p>
-            <p class="contact-info-small-text text-center mx-auto">If you want assistance with choosing strings and tension, contact us with your questions. We also take orders through direct message, text, call, and email.</p>
+            <p class="contact-info-small-text text-center mx-auto">If you want assistance with choosing strings and tension, contact us with your questions. We also take orders through direct message, text, call, and email</p>
             <div class="row mx-auto">
                 <div class="col">
                     <div class="contact-element-wrapper d-flex flex-column hoverable" onclick="openQuestionModal()">
                         <i class="bi-chat-fill mx-auto contact-icon"></i>
-                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px;">Direct Messages</p>
+                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px; margin-bottom: 10px;"><b>Direct Messages</b></p>
                         <p class="contact-info-tiny-text text-center">Click Here</p>
                     </div>
                 </div>
@@ -307,15 +315,17 @@
                             <i class="bi-telephone-fill mx-auto contact-icon" style="margin-right: 5px;"></i>    
                             <i class="bi-chat-left-text-fill mx-auto contact-icon" style="margin-left: 5px;"></i>    
                         </div>
-                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px;">Call or Text</p>
-                        <p class="contact-info-tiny-text text-center phone-text-white">651-504-4842</p>
+                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px; margin-bottom: 10px;"><b>Call or Text</b></p>
+                        <p class="contact-info-tiny-text text-center phone-text-white">MPLS: 651-504-4842</p>
+                        <p class="contact-info-tiny-text text-center phone-text-white">STP: 651-317-3715</p>
                     </div>
                 </div>
                 <div class="col">
                     <div class="contact-element-wrapper d-flex flex-column">
                         <i class="bi-envelope-fill mx-auto contact-icon"></i>
-                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px;">Email Us</p>
+                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px; margin-bottom: 10px;"><b>Email</b></p>
                         <p class="contact-info-tiny-text text-center">AdvantageStringers@gmail.com</p>
+                        <p class="contact-info-tiny-text text-center">AdvantageStringingSP@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -338,6 +348,11 @@
                             <input type="text" class="blue-input" placeholder="Last Name" id="questionLastName" required>
                         </div>
                         <input type="text" class="blue-input" placeholder="Email / Phone Number" id="questionContactInfo" required>
+                        <select class="form-select dropdown-button mx-auto hoverable blue-input" aria-label="locationContact" id="locationContact" required>
+                            <option selected disabled value="">Location</option>
+                            <option value="Saint Paul">Saint Paul</option>
+                            <option value="Minneapolis">Minneapolis</option>
+                        </select>
                         <textarea class="form-control blue-textarea" id="questionMessage" rows="3" placeholder="Question / Message" required></textarea>
                     </div>
                     <div class="modal-footer">
@@ -352,7 +367,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Order Complete</h5>
+              <h5 class="modal-title">New Message</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -386,9 +401,23 @@
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-6 mx-auto">
-                    <p class="footer-large-text">Advantage Stringing</p>
-                    <p class="footer-medium-text phone-text-white">651-504-4642</p>
-                    <p class="footer-medium-text">AdvantageStringers@gmail.com</p>
+                    <div class="row">
+                        <p class="footer-large-text" style="padding-left: 15px;">Advantage Stringing</p>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="footer-medium-text" style="margin-bottom: 0px;">Saint Paul</p>
+                            <p class="footer-small-text phone-text-white" style="margin-bottom: 0px;">651-317-3715</p>
+                            <p class="footer-small-text">AdvantageStringingSP@gmail.com</p>
+                        </div>
+                        <div class="col">
+                            <p class="footer-medium-text" style="margin-bottom: 0px;">Minneapolis</p>
+                            <p class="footer-small-text phone-text-white" style="margin-bottom: 0px;">651-504-4642</p>
+                            <p class="footer-small-text" style="margin-bottom: 0px;">AdvantageStringers@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    
                 </div>
                 <div class="col-2 mx-auto">
                     <p class="footer-small-text hoverable" onclick="goToOrderPage()">Order</p>
@@ -400,7 +429,6 @@
                     <p class="footer-small-text hoverable" onclick="goToBadmintonPage()">Badminton</p>
                     <p class="footer-small-text hoverable" onclick="goToAboutPage()">About</p>
                     <p class="footer-small-text hoverable" onclick="goToFAQsPage()">FAQs</p>
-                    <p class="footer-small-text hoverable" onclick="goToEventsPage()">Events</p>
                 </div>
             </div>
         </div>
@@ -558,10 +586,11 @@
         }
     }
 
-    function ContactInfo(first, last, contact, notes, timeline) {
+    function ContactInfo(first, last, contact, email, notes, timeline) {
         this.first = first;
         this.last = last;
         this.contact = contact;
+        this.email = email;
         this.notes = notes;
         this.timeline = timeline;
     }
@@ -654,8 +683,6 @@
         $("#racketBrand").val("");
         $("#racketModel").val("");
 
-        // TODO: find out how to reset radio buttons
-
         // Reset string select buttons
         $("#mainStringInput").val("");
         $("#crossStringInput").val("");
@@ -682,13 +709,16 @@
     let orderContactInfo;
 
     $("#contactInfoForm").on('submit', async function(e) {
-        console.log("super list", racketList);
         e.preventDefault();
+
+        let email = $("#locationContactInfo").val() == "Minneapolis" ? "AdvantageStringers@gmail.com" : "AdvantageStringingSP@gmail.com";
+
         //Put invalid form input handling here
         orderContactInfo = new ContactInfo(
             $("#contactFirstName").val(),
             $("#contactLastName").val(),
             $("#contactContactInfo").val(),
+            email,
             $("#contactNotes").val(),
             turnaroundTime
         )
@@ -697,6 +727,7 @@
         $("#contactFirstName").val("");
         $("#contactLastName").val("");
         $("#contactContactInfo").val("");
+        $("#locationContactInfo").val("");
         $("#contactNotes").val("");
 
         for(let i=1; i<4; i++) {
@@ -706,8 +737,6 @@
         }
 
         turnaroundTime = 0;
-
-        console.log("before list: ", racketList);
 
         //Send order information email
         await sendOrderEmail(racketList, orderContactInfo);
@@ -760,12 +789,15 @@
 
     $("#questionForm").on('submit', function(e) {
         e.preventDefault();
+
+        let email = $("#locationContact").val() == "Minneapolis" ? "AdvantageStringers@gmail.com" : "AdvantageStringingSP@gmail.com";
         
         let newQuestion = new Question(
             $("#questionFirstName").val(),
             $("#questionLastName").val(),
             $("#questionContactInfo").val(),
-            $("#questionMessage").val()
+            $("#questionMessage").val(),
+            email
         )
 
         // Clear form
@@ -773,6 +805,7 @@
         $("#questionLastName").val("")
         $("#questionContactInfo").val("")
         $("#questionMessage").val("")
+        $("#locationContact").val("");
 
         // Send message to us
         sendQuestionEmail(newQuestion);

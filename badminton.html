@@ -58,9 +58,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="faqs.html">FAQs</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="events.html">Events</a>
-            </li>
             </ul>
             <button class="btn my-2 my-sm-0 navbar-white-button" onclick="goToOrderPage()">Order Now</button>
         </div></div>
@@ -107,11 +104,11 @@
                             <h4 class="my-0 font-weight-normal">Standard</h4>
                             </div>
                             <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$30</h1>
+                            <h1 class="card-title pricing-card-title">$35</h1>
                             <ul class="list-unstyled mt-3 mb-4">
                                 <li>We provide string</li>
-                                <li>Yonex BG65</li>
-                                <li>Strings: $5</li>
+                                <li>Yonex BG65ti</li>
+                                <li>Strings: $10</li>
                                 <li>Stringing Fee: $25</li>
                             </ul>
                             <button type="button" class="btn mb-3 solid-blue-button my-auto" onclick="goToOrderPage()">Order Now</button>
@@ -140,8 +137,8 @@
                 <div class="d-flex flex-column">
                     <div class="text-wrapper my-auto">
                         <p class="badminton-section-header">Place an Order</p>
-                        <p class="badminton-section-text">Visit our "Order" page to start your order. Don't worry about paying now, we accept payment through Venmo or cash after we finish stringing.</p>
-                        <p class="badminton-section-text" style="margin: 15px 0px;">Once we recieve your order details, our team will reach out to establish a pickup or dropoff location. We are located in Falcon Heights, and offer a delivery service for $2/mile. </p>
+                        <p class="badminton-section-text">Visit our "Order" page to start your order. We have 2 locations, one in Saint Paul and one in Minneapolis, and make sure to indicate your preference while placing your order.</p>
+                        <p class="badminton-section-text" style="margin: 15px 0px;">Once we recieve your order details, our team will reach out to establish a pickup or dropoff location. Don't worry about paying now, we accept payment through Venmo or cash after we finish stringing.</p>
                     </div>
                     <button type="submit" class="btn mb-3 solid-blue-button my-auto" style="width: 170px;" onclick="goToOrderPage()">Order Now</button>
                 </div>
@@ -170,7 +167,7 @@
                 <div class="col">
                     <div class="contact-element-wrapper d-flex flex-column hoverable" onclick="openQuestionModal()">
                         <i class="bi-chat-fill mx-auto contact-icon"></i>
-                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px;">Direct Messages</p>
+                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px; margin-bottom: 10px;"><b>Direct Messages</b></p>
                         <p class="contact-info-tiny-text text-center">Click Here</p>
                     </div>
                 </div>
@@ -180,15 +177,17 @@
                             <i class="bi-telephone-fill mx-auto contact-icon" style="margin-right: 5px;"></i>    
                             <i class="bi-chat-left-text-fill mx-auto contact-icon" style="margin-left: 5px;"></i>    
                         </div>
-                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px;">Call or Text</p>
-                        <p class="contact-info-tiny-text text-center phone-text-white">651-504-4842</p>
+                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px; margin-bottom: 10px;"><b>Call or Text</b></p>
+                        <p class="contact-info-tiny-text text-center phone-text-white">MPLS: 651-504-4842</p>
+                        <p class="contact-info-tiny-text text-center phone-text-white">STP: 651-317-3715</p>
                     </div>
                 </div>
                 <div class="col">
                     <div class="contact-element-wrapper d-flex flex-column">
                         <i class="bi-envelope-fill mx-auto contact-icon"></i>
-                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px;">Email Us</p>
+                        <p class="contact-info-tiny-text text-center" style="margin-top: 15px; margin-bottom: 10px;"><b>Email</b></p>
                         <p class="contact-info-tiny-text text-center">AdvantageStringers@gmail.com</p>
+                        <p class="contact-info-tiny-text text-center">AdvantageStringingSP@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -211,6 +210,11 @@
                             <input type="text" class="blue-input" placeholder="Last Name" id="questionLastName" required>
                         </div>
                         <input type="text" class="blue-input" placeholder="Email / Phone Number" id="questionContactInfo" required>
+                        <select class="form-select dropdown-button mx-auto hoverable blue-input" aria-label="locationContact" id="locationContact" required>
+                            <option selected disabled value="">Location</option>
+                            <option value="Saint Paul">Saint Paul</option>
+                            <option value="Minneapolis">Minneapolis</option>
+                        </select>
                         <textarea class="form-control blue-textarea" id="questionMessage" rows="3" placeholder="Question / Message" required></textarea>
                     </div>
                     <div class="modal-footer">
@@ -225,7 +229,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Order Complete</h5>
+              <h5 class="modal-title">New Message</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -259,9 +263,23 @@
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-6 mx-auto">
-                    <p class="footer-large-text">Advantage Stringing</p>
-                    <p class="footer-medium-text phone-text-white">651-504-4642</p>
-                    <p class="footer-medium-text">AdvantageStringers@gmail.com</p>
+                    <div class="row">
+                        <p class="footer-large-text" style="padding-left: 15px;">Advantage Stringing</p>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="footer-medium-text" style="margin-bottom: 0px;">Saint Paul</p>
+                            <p class="footer-small-text phone-text-white" style="margin-bottom: 0px;">651-317-3715</p>
+                            <p class="footer-small-text">AdvantageStringingSP@gmail.com</p>
+                        </div>
+                        <div class="col">
+                            <p class="footer-medium-text" style="margin-bottom: 0px;">Minneapolis</p>
+                            <p class="footer-small-text phone-text-white" style="margin-bottom: 0px;">651-504-4642</p>
+                            <p class="footer-small-text" style="margin-bottom: 0px;">AdvantageStringers@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    
                 </div>
                 <div class="col-2 mx-auto">
                     <p class="footer-small-text hoverable" onclick="goToOrderPage()">Order</p>
@@ -273,7 +291,6 @@
                     <p class="footer-small-text hoverable" onclick="goToBadmintonPage()">Badminton</p>
                     <p class="footer-small-text hoverable" onclick="goToAboutPage()">About</p>
                     <p class="footer-small-text hoverable" onclick="goToFAQsPage()">FAQs</p>
-                    <p class="footer-small-text hoverable" onclick="goToEventsPage()">Events</p>
                 </div>
             </div>
         </div>
@@ -309,12 +326,15 @@
 
     $("#questionForm").on('submit', function(e) {
         e.preventDefault();
+
+        let email = $("#locationContact").val() == "Minneapolis" ? "AdvantageStringers@gmail.com" : "AdvantageStringingSP@gmail.com";
         
         let newQuestion = new Question(
             $("#questionFirstName").val(),
             $("#questionLastName").val(),
             $("#questionContactInfo").val(),
-            $("#questionMessage").val()
+            $("#questionMessage").val(),
+            email
         )
 
         // Clear form
@@ -322,6 +342,7 @@
         $("#questionLastName").val("")
         $("#questionContactInfo").val("")
         $("#questionMessage").val("")
+        $("#locationContact").val("");
 
         // Send message to us
         sendQuestionEmail(newQuestion);
