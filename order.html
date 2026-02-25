@@ -457,6 +457,7 @@
 <script>
 
     const deluxeStrings = ["Hyper G", "Confidential", "Tour Bite", "Wasabi"]
+    const badmintonStrings = ["BG65ti Badminton"]
 
     const scrollToOrder = () => {
         $('.order-form-col')[0].scrollIntoView({behavior: "smooth"});
@@ -604,6 +605,8 @@
         if(stringProvider == 0) {
             if(deluxeStrings.includes($("#mainStringSelect").val()) | deluxeStrings.includes($("#crossStringSelect").val())) {
                 price = 25;
+            } else if(badmintonStrings.includes($("#mainStringSelect").val()) | badmintonStrings.includes($("#crossStringSelect").val())) {
+                price = 45;
             } else {
                 price = 20;
             }
